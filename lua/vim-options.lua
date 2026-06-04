@@ -11,6 +11,8 @@ vim.opt.showmode = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 
+vim.opt.colorcolumn = "80"
+
 -- This keymap clears the search
 vim.keymap.set("n", "<leader>h", ":nohlsearch<CR>")
 vim.keymap.set("n", "<leader>ee", "oif err != nil {<CR>}<Esc>Oreturn err")
