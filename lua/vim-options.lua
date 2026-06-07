@@ -10,6 +10,7 @@ vim.opt.expandtab = true
 vim.opt.showmode = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
+vim.o.winborder = "rounded"
 
 vim.opt.colorcolumn = "80"
 
