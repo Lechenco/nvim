@@ -38,8 +38,7 @@ return {
 		end,
 	},
 	{
-		"mfussenegger/nvim-dap-python",
-		ft = "python",
+		"leoluz/nvim-dap-go",
 		dependencies = {
 			"mfussenegger/nvim-dap",
 		},
@@ -61,8 +60,7 @@ return {
 				dapui.close()
 			end
 
-			local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python3"
-			require("dap-python").setup(path)
+			require("dap-go").setup()
 		end,
 	},
 }

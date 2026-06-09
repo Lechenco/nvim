@@ -21,5 +21,7 @@ return {
 		vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope oldfiles<cr>", {})
 		vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", {})
 		vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", {})
+		vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", {})
+		vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", {})
 	end,
 }
