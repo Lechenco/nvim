@@ -41,3 +41,5 @@ vim.opt.winborder = "rounded"
 vim.opt.colorcolumn = "80"
 vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
+vim.opt.conceallevel = 2
+vim.g.netrw_banner = 0

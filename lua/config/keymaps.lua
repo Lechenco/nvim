@@ -18,3 +18,6 @@ vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines without moving cursor" })
 -- Movements
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down in buffer with cursor centered" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor centered" })
+
+-- Netwr
+vim.keymap.set("n", "<leader>e", "<cmd> Explore<CR>", { desc = "Open File Explorer" })

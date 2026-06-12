@@ -52,5 +52,18 @@ return {
 				}),
 			},
 		})
+
+		-- LuaSnip keymaps
+		vim.keymap.set({ "i" }, "<C-K>", function()
+			luasnip.jump(1)
+		end, { silent = true })
+		vim.keymap.set({ "i" }, "<C-J>", function()
+			luasnip.jump(-1)
+		end, { silent = true })
+		vim.keymap.set({ "i" }, "<C-e>", function()
+			if luasnip.choice_active() then
+				luasnip.change_choice(1)
+			end
+		end, { silent = true })
 	end,
 }
