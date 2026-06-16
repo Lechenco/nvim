@@ -13,12 +13,12 @@ return {
 
 		telescope.setup({
 			defaults = {
-				path_display = { "truncate" },
+				path_display = { truncate = 6 },
 			},
 		})
 		-- set keymaps
 		vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>", {})
-		vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope oldfiles<cr>", {})
+		vim.keymap.set("n", "<leader><leader>", "<cmd>Telescope buffers<cr>", {})
 		vim.keymap.set("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", {})
 		vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", {})
 		vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", {})
