@@ -15,7 +15,7 @@ local in_test_file = {
 }
 
 return {
-    s({  trig = "function",
+    s({  trig = "functest",
           desc = "Test function",
           regTrig = false,
           priority = 100,
@@ -32,10 +32,20 @@ return {
           regTrig = false,
           priority = 100,
         }, {
-            t("t.Run(\""), i(1, "Test Description"), t({"\", function(t *testing.T) {", ""}),
+            t("t.Run(\""), i(1, "Test Description"), t({"\", func(t *testing.T) {", ""}),
             t({"    assert = assert.New(t)", "    "}), i(2, "// SubTest Function"),
-            t({"", "}"})
+            t({"", "})", ""})
         },
         in_test_file
     ),
+
+    s({  trig = "errnil",
+      desc = "Verify if err != nil",
+      regTrig = false,
+      priority = 50,
+    }, {
+        t("if err != nil {"),
+        t({"", "\t"}), i(1, "// Treat Error"),
+        t({"", "}", ""})
+    }),
 }

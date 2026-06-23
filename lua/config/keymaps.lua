@@ -21,3 +21,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor 
 
 -- Netwr
 vim.keymap.set("n", "<leader>e", "<cmd> Explore<CR>", { desc = "Open File Explorer" })
+
+-- Buffers
+vim.keymap.set("n", "<A-q>", "<cmd> :bd<CR>", { desc = "Close Current Buffer" })
+
