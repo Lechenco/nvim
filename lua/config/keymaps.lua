@@ -15,13 +15,21 @@ vim.keymap.set("n", "N", "Nzzzv", { desc = "Previous search result cursor center
 -- Join lines
 vim.keymap.set("n", "J", "mzJ`z", { desc = "Join lines without moving cursor" })
 
+-- Insert mode
+vim.keymap.set("i", "<C-BS>", "<C-W>", { desc = "Delete word backward" })
+vim.keymap.set("i", "<C-H>", "<C-W>", { desc = "Delete word backward" })
+
 -- Movements
 vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down in buffer with cursor centered" })
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor centered" })
+vim.keymap.set("n", "n", "nzz", { desc = "move to next occurrence with cursor centered" })
+vim.keymap.set("n", "N", "Nzz", { desc = "move to previous occurrence with cursor centered" })
+-- vim.keymap.set("n", "j", "jzz", { desc = "move down on line buffer with cursor centered" })
+-- vim.keymap.set("n", "k", "kzz", { desc = "move up on line buffer with cursor centered" })
 
 -- Netwr
 vim.keymap.set("n", "<leader>e", "<cmd> Explore<CR>", { desc = "Open File Explorer" })
 
 -- Buffers
 vim.keymap.set("n", "<A-q>", "<cmd> :bd<CR>", { desc = "Close Current Buffer" })
-
+vim.keymap.set("n", "<A-Q>", "<cmd> :%bd|e#|bd#<CR>", { desc = "Close All except Current Buffer" })
