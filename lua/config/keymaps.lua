@@ -24,6 +24,9 @@ vim.keymap.set("n", "<C-d>", "<C-d>zz", { desc = "move down in buffer with curso
 vim.keymap.set("n", "<C-u>", "<C-u>zz", { desc = "move up in buffer with cursor centered" })
 vim.keymap.set("n", "n", "nzz", { desc = "move to next occurrence with cursor centered" })
 vim.keymap.set("n", "N", "Nzz", { desc = "move to previous occurrence with cursor centered" })
+vim.keymap.set("n", "<C-o>", "<C-o>zz", { desc = "move to previous buffer position with cursor centered" })
+vim.keymap.set("n", "<C-i>", "<C-i>zz", { desc = "move to next buffer position with cursor centered" })
+vim.keymap.set("n", "G", "Gzz", { desc = "move to end of buffer with cursor centered" })
 -- vim.keymap.set("n", "j", "jzz", { desc = "move down on line buffer with cursor centered" })
 -- vim.keymap.set("n", "k", "kzz", { desc = "move up on line buffer with cursor centered" })
 
@@ -33,3 +36,11 @@ vim.keymap.set("n", "<leader>e", "<cmd> Explore<CR>", { desc = "Open File Explor
 -- Buffers
 vim.keymap.set("n", "<A-q>", "<cmd> :bd<CR>", { desc = "Close Current Buffer" })
 vim.keymap.set("n", "<A-Q>", "<cmd> :%bd|e#|bd#<CR>", { desc = "Close All except Current Buffer" })
+
+-- Tags
+vim.keymap.set("n", "<leader>tt", "<cmd> :silent !ctags -R . <CR>:redraw!<CR>")
+vim.keymap.set("n", "<leader>gt", "<cmd> :LookThisTag<CR>", { desc = "Search Tag under the cursor" })
+
+-- Terminal
+vim.keymap.set("t", "<C-\\>", "<C-\\><C-n>", {desc = "Exit from terminal mode" })
+vim.keymap.set("n", "<C-t>", "<cmd> :split <CR> :resize 20 <CR> :terminal<CR>", {desc = "Open new terminal buffer" })

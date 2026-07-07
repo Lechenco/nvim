@@ -1,4 +1,3 @@
--- plugins/telescope.lua:
 return {
 	"nvim-telescope/telescope.nvim", --tag = '0.1.8',
 	-- or                              , branch = '0.1.x',
@@ -23,5 +22,7 @@ return {
 		vim.keymap.set("n", "<leader>fs", "<cmd>Telescope git_status<cr>", {})
 		vim.keymap.set("n", "<leader>fk", "<cmd>Telescope keymaps<cr>", {})
 		vim.keymap.set("n", "<leader>fd", "<cmd>Telescope diagnostics<cr>", {})
+		vim.keymap.set("n", "<leader>fo", "<cmd>Telescope oldfiles<cr>", {})
+		vim.keymap.set("n", "<leader>ft", "<cmd>Telescope tags<cr>", {})
 	end,
 }

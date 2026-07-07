@@ -14,4 +14,26 @@ return {
 		t("- [ ] "),
 		i(1, "task"),
 	}),
+    s({  trig = "fmheader",
+      desc = "Front Matter header",
+      regTrig = false,
+      priority = 1,
+    }, {
+        t({"---", ""}),
+        t("title: "), i(1, "Title"),
+        t({"", "date: "}), t(os.date("%a, %d %b %Y")), i(2),
+        t({"", "tags: "}), i(3, "tag1, tag2"),
+        t({"", "---", ""}),
+        i(4)
+    }),
+    s({  trig = "fmtags",
+      desc = "Front Matter header with tags",
+      regTrig = false,
+      priority = 1,
+    }, {
+        t({"---"}),
+        t({"", "tags: "}), i(1, "tag1, tag2"),
+        t({"", "---", ""}),
+        i(2)
+    }),
 }
