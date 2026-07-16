@@ -8,6 +8,7 @@ return {
 		"saadparwaiz1/cmp_luasnip", -- for autocompletion
 		"rafamadriz/friendly-snippets", -- useful snippets
 		"onsails/lspkind.nvim", -- vs-code like pictograms
+        "quangnguyen30192/cmp-nvim-tags"
 	},
 	config = function()
 		local cmp = require("cmp")
@@ -43,6 +44,7 @@ return {
 				{ name = "luasnip" }, -- snippets
 				{ name = "buffer" }, -- text within current buffer
 				{ name = "path" }, -- file system paths
+                { name = "tags" },
 			}),
 			-- configure lspkind for vs-code like pictograms in completion menu
 			formatting = {
