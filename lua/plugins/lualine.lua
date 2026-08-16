@@ -8,8 +8,8 @@ return {
 				component_separators = { left = " ", right = " " },
 				theme = {
 					normal = {
-						a = { bg = 6, fg = 15, gui = "bold" },
-						b = { bg = 6, fg = 15 },
+						a = { bg = 4, fg = 15, gui = "bold" },
+						b = { bg = 4, fg = 15 },
 						c = { bg = 14, fg = 8 },
 					},
 					insert = {

@@ -14,6 +14,11 @@ return {
 			defaults = {
 				path_display = { truncate = 6 },
 			},
+            pickers = {
+                tags = {
+                    fuzzy = false
+                }
+            }
 		})
 		-- set keymaps
 		vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files sort_mru=true <cr>", {})
